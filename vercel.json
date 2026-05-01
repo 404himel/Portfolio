@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "buildCommand": "python manage.py collectstatic --noinput",
   "builds": [
     {
       "src": "portfolio_project/wsgi.py",
@@ -9,7 +10,7 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/static/$1"
+      "dest": "/staticfiles/$1"
     },
     {
       "src": "/(.*)",
