@@ -1,0 +1,231 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Md. Tanvir Mahamud Himel, AI researcher, competitive programmer, and CSE student.">
+    <title>{{ name }} | AI Research Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+</head>
+<body>
+    <div class="page-bg"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <header class="site-header">
+        <a class="brand" href="#hero"><span>H</span> Himel</a>
+        <nav class="nav" id="navMenu">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#research">Research</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+    </header>
+
+    <main>
+        <section class="hero section" id="hero">
+            <div class="hero-content reveal">
+                <div class="pill"><span></span> Open to AI research and ML engineering roles</div>
+                <p class="eyebrow">AI Researcher · Competitive Programmer · CSE Student</p>
+                <h1>Md. Tanvir Mahamud <em>Himel</em></h1>
+                <p class="hero-text">I build research driven AI systems using machine learning, deep learning, large language models, RAG, explainable AI, and real time intelligent applications.</p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="#projects">Explore Work</a>
+                    <a class="btn secondary" href="{{ github }}" target="_blank" rel="noopener">GitHub</a>
+                    <a class="btn secondary" href="{{ linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+                <div class="hero-meta">
+                    <span>{{ location }}</span>
+                    <span>{{ email }}</span>
+                    <span>{{ phone }}</span>
+                </div>
+            </div>
+
+            <div class="hero-panel reveal">
+                <div class="terminal-card">
+                    <div class="terminal-top"><span></span><span></span><span></span></div>
+                    <p><b>$ profile</b></p>
+                    <p class="cmd">name: Md. Tanvir Mahamud Himel</p>
+                    <p class="cmd">focus: ML, XAI, LLM, RAG, CV, EEG</p>
+                    <p class="cmd">status: final year CSE student</p>
+                    <p class="cmd">github: github.com/404himel</p>
+                </div>
+                <div class="quick-stats">
+                    <div><strong>600+</strong><span>Problems solved</span></div>
+                    <div><strong>70+</strong><span>Contests</span></div>
+                    <div><strong>3.70</strong><span>CGPA</span></div>
+                    <div><strong>6+</strong><span>Research works</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about" id="about">
+            <div class="section-title center reveal">
+                <p>// About Me</p>
+                <h2>Research Mindset With Practical AI Building Experience</h2>
+                <span>I connect academic research with working software systems.</span>
+            </div>
+            <div class="about-grid">
+                <article class="glass-card reveal">
+                    <h3>Who I Am</h3>
+                    <p>I am a final year B.Sc. student in Computer Science and Engineering at Comilla University. My work focuses on machine learning, deep learning, large language models, explainable AI, real time intelligent systems, and data driven research.</p>
+                    <p>I have built systems for sign language recognition, diabetes prediction with explainable AI, EEG based attention decoding, RAG based question answering, AI health assistants, and speaking evaluation tools.</p>
+                </article>
+                <article class="glass-card reveal">
+                    <h3>What I Focus On</h3>
+                    <div class="focus-list">
+                        <span>Machine Learning</span>
+                        <span>Deep Learning</span>
+                        <span>Explainable AI</span>
+                        <span>Large Language Models</span>
+                        <span>RAG Systems</span>
+                        <span>Computer Vision</span>
+                        <span>EEG Signal Processing</span>
+                        <span>Django</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <div class="section-title center reveal">
+                <p>// Projects</p>
+                <h2>Selected AI and Software Projects</h2>
+                <span>Each project focuses on practical problem solving, model integration, and usable outputs.</span>
+            </div>
+            <div class="project-grid">
+                <article class="project-card reveal">
+                    <div class="card-top"><span>01</span><b>LLM · NL to SQL</b></div>
+                    <h3>Banking Customer Support AI Agent</h3>
+                    <p>Fine tuned LLaMA 3 8B with 4 bit quantization using Unsloth and connected it with SQLite based natural language to SQL for real time banking support.</p>
+                    <div class="tags"><span>LLaMA 3</span><span>Unsloth</span><span>SQLite</span><span>Streamlit</span></div>
+                </article>
+                <article class="project-card reveal featured">
+                    <div class="card-top"><span>02</span><b>Speech AI</b></div>
+                    <h3>BandMate: AI IELTS Speaking Practice Assistant</h3>
+                    <p>An AI speaking simulator with examiner voice, speech transcription, band scoring, and feedback for IELTS speaking practice.</p>
+                    <div class="tags"><span>Whisper</span><span>Edge TTS</span><span>Qwen</span><span>Librosa</span></div>
+                </article>
+                <article class="project-card reveal">
+                    <div class="card-top"><span>03</span><b>RAG · Health AI</b></div>
+                    <h3>HealthRAG: AI Health and Diet Planning Assistant</h3>
+                    <p>Generated personalized diet and exercise plans using RAG, real time LLM responses, sentence embeddings, ChromaDB, and automated PDF reports.</p>
+                    <div class="tags"><span>LangChain</span><span>LLaMA 3.3</span><span>ChromaDB</span><span>FPDF</span></div>
+                </article>
+                <article class="project-card reveal">
+                    <div class="card-top"><span>04</span><b>Document AI</b></div>
+                    <h3>PDF Based Question Answer Generation System</h3>
+                    <p>Created a document grounded question and answer generator with RAG, LLaMA 3.1 8B through Groq, LangChain, embeddings, and CSV export.</p>
+                    <div class="tags"><span>Groq</span><span>RAG</span><span>LangChain</span><span>Pandas</span></div>
+                </article>
+                <article class="project-card reveal">
+                    <div class="card-top"><span>05</span><b>Automation</b></div>
+                    <h3>E Commerce Web Scraper</h3>
+                    <p>Built a Selenium based scraper to collect product information, prices, and reviews with multithreading for faster data collection.</p>
+                    <div class="tags"><span>Selenium</span><span>BeautifulSoup</span><span>Pandas</span><span>Python</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="section-title center reveal">
+                <p>// Skills</p>
+                <h2>Technical Stack</h2>
+                <span>Tools and technologies used across research, development, and deployment.</span>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-box reveal"><h3>AI and Machine Learning</h3><p>TensorFlow, PyTorch, Scikit learn, Keras, CNN, RNN, LSTM, Transformer, ViT, Ensemble Methods, SHAP, LIME</p></div>
+                <div class="skill-box reveal"><h3>NLP and LLM</h3><p>Hugging Face Transformers, LangChain, LLaMA 3, RAG, Sentence Transformers, fine tuning, Unsloth, NL to SQL</p></div>
+                <div class="skill-box reveal"><h3>Data Science</h3><p>NumPy, Pandas, Matplotlib, Seaborn, preprocessing, feature engineering, statistics, probability</p></div>
+                <div class="skill-box reveal"><h3>Databases</h3><p>MySQL, SQLite, ChromaDB, vector database based retrieval systems</p></div>
+                <div class="skill-box reveal"><h3>Development Tools</h3><p>Git, GitHub, Google Colab, Jupyter Notebook, VS Code, Overleaf, Streamlit, Django, Docker basics</p></div>
+                <div class="skill-box reveal"><h3>Programming</h3><p>C, C++, Python, Java, basic JavaScript, problem solving, algorithmic thinking</p></div>
+            </div>
+        </section>
+
+        <section class="section" id="research">
+            <div class="section-title center reveal">
+                <p>// Research</p>
+                <h2>Research and Publications</h2>
+                <span>Published, accepted, submitted, and under review research works.</span>
+            </div>
+            <div class="research-grid">
+                <article class="research-card reveal"><time>IEEE ICCIT 2024</time><h3>RTSLIS: A Real Time Sign Language Interpretation System Based on Vision Transformers</h3><p>Vision Transformer based real time sign language interpretation system, presented at the 27th International Conference on Computer and Information Technology.</p></article>
+                <article class="research-card reveal"><time>IEEE QPAIN 2025</time><h3>Diabetes Prediction with Explainable AI</h3><p>A stacking ensemble approach for better accuracy and interpretability in diabetes prediction.</p></article>
+                <article class="research-card reveal"><time>Accepted 2025</time><h3>Interpretable Deep Learning with Entity Embeddings for Early Dengue Prediction in Bangladesh</h3><p>Accepted at IEEE Computer Society Bangladesh Chapter Summer Symposium 2025.</p></article>
+                <article class="research-card reveal"><time>Under Review</time><h3>AttentionBot: Real Time Attention Level Monitoring</h3><p>An intelligent robotic system for real time attention level monitoring, under review in Engineering Applications of Artificial Intelligence.</p></article>
+                <article class="research-card reveal"><time>Under Review</time><h3>Transformer Architecture for EEG Based Attention Decoding</h3><p>Attention aware Transformer architecture for decoding human attention levels from EEG signals.</p></article>
+                <article class="research-card reveal"><time>Submitted</time><h3>BanglaLiteFormer</h3><p>A lightweight Transformer based efficient sentiment classification system for Bangla e commerce reviews.</p></article>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <div class="section-title center reveal">
+                <p>// Experience</p>
+                <h2>Where I Have Worked</h2>
+                <span>Research, academic work, and competitive programming journey.</span>
+            </div>
+            <div class="timeline-wrap">
+                <div class="timeline-line"></div>
+                <article class="work-card left reveal">
+                    <div class="dot"></div>
+                    <span>Apr 2026 to Present</span>
+                    <h3>Research Assistant</h3>
+                    <h4>International Research Collaboration Bangladesh</h4>
+                    <p>Conducting collaborative international research in artificial intelligence and machine learning.</p>
+                    <div class="mini-tags"><b>AI</b><b>ML</b><b>Research</b></div>
+                </article>
+                <article class="work-card right reveal">
+                    <div class="dot"></div>
+                    <span>Aug 2024 to Present</span>
+                    <h3>Research Assistant</h3>
+                    <h4>Comilla University</h4>
+                    <p>Working on HCI based student attention modeling and Transformer based EEG signal attention decoding.</p>
+                    <div class="mini-tags"><b>EEG</b><b>HCI</b><b>Transformer</b></div>
+                </article>
+                <article class="work-card left reveal">
+                    <div class="dot"></div>
+                    <span>Mar 2022 to Present</span>
+                    <h3>BSc in Computer Science and Engineering</h3>
+                    <h4>Comilla University</h4>
+                    <p>Studying computer science and engineering with a current CGPA of 3.70 out of 4.00.</p>
+                    <div class="mini-tags"><b>CSE</b><b>CGPA 3.70</b><b>Research</b></div>
+                </article>
+                <article class="work-card right reveal">
+                    <div class="dot"></div>
+                    <span>Competitive Programming</span>
+                    <h3>ICPC and Online CP</h3>
+                    <h4>Codeforces · LeetCode · AtCoder · CodeChef</h4>
+                    <p>Ranked 412th out of 3000 plus teams in ICPC Asia Dhaka Regional Preliminary and solved 600 plus problems.</p>
+                    <div class="mini-tags"><b>C++</b><b>DSA</b><b>Problem Solving</b></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div class="contact-card reveal">
+                <p class="eyebrow">// Contact</p>
+                <h2>Let Us Build Something Meaningful</h2>
+                <p>I am open to AI research collaboration, machine learning projects, research assistant roles, and software development opportunities.</p>
+                <div class="contact-links">
+                    <a href="mailto:{{ email }}">Email Me</a>
+                    <a href="{{ linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="{{ github }}" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Md. Tanvir Mahamud Himel. Built with Django.</p>
+    </footer>
+
+    <script src="{% static 'portfolio/js/main.js' %}"></script>
+</body>
+</html>
